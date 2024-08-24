@@ -1,0 +1,141 @@
+.toast {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    max-width: 400px;
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.toast-success {
+    background-color: #13b313;
+    color: #f1f8f1;
+}
+
+.toast-error {
+    background-color: #b10a07;
+    color: #fdf3f2;
+}
+
+.toast-info {
+    background-color: #00518f;
+    color: #e8f4fd;
+}
+
+.toast-sharp {
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    max-width: 420px;
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #101010, #1b1b1b);
+    color: #00FFCC;
+    filter: drop-shadow(0 0 0.1rem #00FFCC);
+}
+
+
+/* Variant styles */
+.toast-success-sharp {
+    background: linear-gradient(145deg, #003300, #006600);
+    color: #00FFCC;
+}
+
+.toast-error-sharp {
+    background: linear-gradient(145deg, #330000, #660000);
+    color: #FF3366;
+}
+
+.toast-info-sharp {
+    background: linear-gradient(145deg, #001122, #003366);
+    color: #33CCFF;
+}
+
+/* Toaster container */
+.toaster-container {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Toaster positions */
+.toaster-top-left,
+.toaster-top-right,
+.toaster-top-center {
+    top: 0;
+}
+
+.toaster-bottom-left,
+.toaster-bottom-right,
+.toaster-bottom-center {
+    bottom: 0;
+}
+
+.toaster-top-left,
+.toaster-bottom-left {
+    left: 0;
+    align-items: flex-start;
+}
+
+.toaster-top-right,
+.toaster-bottom-right {
+    right: 0;
+}
+
+.toaster-top-center,
+.toaster-bottom-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Toast stack */
+.toast-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Animation classes */
+.toast-enter {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9) rotateX(20deg);
+}
+
+.toast-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+}
+
+.toast-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+}
+
+.toast-exit-active {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9) rotateX(20deg);
+}
