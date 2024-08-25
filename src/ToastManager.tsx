@@ -1,4 +1,3 @@
-// src/context/ToastManager.ts
 export type ToastVariant = "success" | "error" | "info" | "warning";
 export type ToastPosition =
   | "top-left"

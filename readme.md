@@ -81,7 +81,7 @@ For detailed usage instructions, advanced customization options, and API documen
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](https://github.com/yourusername/toastam/blob/main/CONTRIBUTING.md) for more details.
+We welcome contributions! Please see our [Contributing Guide](https://github.com/thakurdotdev/toastam/blob/main/CONTRIBUTING.md) for more details.
 
 ## License
 

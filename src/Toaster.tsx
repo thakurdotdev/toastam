@@ -1,14 +1,13 @@
-// src/components/Toaster.tsx
 import * as React from "react";
 import { useEffect, useState } from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import "../styles/toast.css";
+import "./toast.css";
 import {
   toastManager,
   Toast as ToastType,
   ToastPosition,
-} from "../context/ToastManager";
+} from "./ToastManager";
 
 interface ToasterProps {
   position?: ToastPosition;
