@@ -1,3 +1,7 @@
+body {
+    /* background-color: #1b1b1b; */
+}
+
 .toast {
     padding: 10px;
     border-radius: 8px;
@@ -30,6 +34,11 @@
 .toast-info {
     background-color: #00518f;
     color: #e8f4fd;
+}
+
+.toast-warning {
+    background-color: #ff8c00;
+    color: #fff8f1;
 }
 
 .toast-sharp {
@@ -67,6 +76,11 @@
 .toast-info-sharp {
     background: linear-gradient(145deg, #001122, #003366);
     color: #33CCFF;
+}
+
+.toast-warning-sharp {
+    background: linear-gradient(145deg, #663300, #FF6600);
+    color: #FFCC00;
 }
 
 /* Toaster container */

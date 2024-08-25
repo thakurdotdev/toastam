@@ -1,3 +1,4 @@
+// src/components/Toaster.tsx
 import * as React from "react";
 import { useEffect, useState } from "react";
 import * as ReactDOM from "react-dom";
@@ -81,4 +82,6 @@ export const toast = {
     toastManager.error(message, timeout),
   info: (message: string, timeout?: number) =>
     toastManager.info(message, timeout),
+  warning: (message: string, timeout?: number) =>
+    toastManager.warning(message, timeout),
 };

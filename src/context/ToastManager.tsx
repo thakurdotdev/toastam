@@ -1,4 +1,5 @@
-export type ToastVariant = "success" | "error" | "info";
+// src/context/ToastManager.ts
+export type ToastVariant = "success" | "error" | "info" | "warning";
 export type ToastPosition =
   | "top-left"
   | "top-right"
@@ -75,6 +76,10 @@ class ToastManager {
 
   info(message: string, timeout?: number) {
     this.addToast(message, "info", timeout);
+  }
+
+  warning(message: string, timeout?: number) {
+    this.addToast(message, "warning", timeout);
   }
 
   setDefaultPosition(position: ToastPosition) {
