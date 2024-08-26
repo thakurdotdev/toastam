@@ -12,13 +12,15 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  external: ["react", "react-dom", "react-transition-group"],
+  external: ["react", "react-dom"],
   plugins: [
     typescript({
       tsconfig: "tsconfig.json",
     }),
     postcss({
       extensions: [".css"],
+      minimize: true,
+      inject: true,
     }),
   ],
 });

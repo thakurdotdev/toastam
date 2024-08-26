@@ -57,7 +57,6 @@
     filter: drop-shadow(0 0 0.1rem #00FFCC);
 }
 
-
 /* Variant styles */
 .toast-success-sharp {
     background: linear-gradient(145deg, #003300, #006600);
@@ -129,23 +128,53 @@
     gap: 0.75rem;
 }
 
-/* Animation classes */
 .toast-enter {
     opacity: 0;
-    transform: translateY(-30px) scale(0.9) rotateX(20deg);
-}
-
-.toast-enter-active {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0);
+    transform: translateY(-20px);
 }
 
 .toast-exit {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 400ms, transform 400ms;
 }
 
-.toast-exit-active {
-    opacity: 0;
-    transform: translateY(-30px) scale(0.9) rotateX(20deg);
+/* Media query for small devices */
+@media (max-width: 768px) {
+
+    .toast,
+    .toast-sharp {
+        width: calc(100% - 1rem);
+        margin: 0;
+        max-width: 100%;
+        padding: 8px 12px;
+        overflow: hidden;
+    }
+
+    .toast span,
+    .toast-sharp span {
+        display: block;
+        overflow: hidden;
+
+    }
+
+    .toaster-container {
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        padding: 0.5rem 0;
+        width: calc(100% - 1rem);
+    }
+
+    .toaster-top-left,
+    .toaster-top-right {
+        top: 0;
+        right: auto;
+    }
+
+    .toaster-bottom-left,
+    .toaster-bottom-right {
+        bottom: 0;
+        right: auto;
+    }
 }
