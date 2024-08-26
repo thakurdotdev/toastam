@@ -1,20 +1,55 @@
-.toast {
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    max-width: 400px;
-    width: calc(100% - 2rem);
-    margin: 0 1rem;
+:root {
+    --toast-padding: 10px;
+    --toast-border-radius: 5px;
+    --toast-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --toast-transition: all 0.4s ease;
+    --toast-min-width: 200px;
+    --toast-max-width: 400px;
+    --toast-margin: 0 1rem;
+    --toast-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --toast-font-size: 1.1rem;
+    --toast-font-weight: 500;
+    --toast-color: #fff;
+    --toast-sharp-padding: 12px;
+    --toast-sharp-transition: all 0.3s ease-out;
+    --toast-sharp-max-width: 420px;
+    --toast-sharp-width: calc(100% - 2rem);
+    --toast-sharp-font-size: 1rem;
+    --toast-sharp-background: linear-gradient(145deg, #101010, #1b1b1b);
+    --toast-sharp-color: #00FFCC;
+    --toast-sharp-filter: drop-shadow(0 0 0.1rem #00FFCC);
+}
+
+.toast,
+.toast-sharp {
+    padding: var(--toast-padding);
+    border-radius: var(--toast-border-radius);
+    box-shadow: var(--toast-box-shadow);
+    transition: var(--toast-transition);
+    min-width: var(--toast-min-width);
+    max-width: var(--toast-max-width);
+    margin: var(--toast-margin);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+    font-family: var(--toast-font-family);
+    font-size: var(--toast-font-size);
+    font-weight: var(--toast-font-weight);
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: var(--toast-color);
+}
+
+.toast-sharp {
+    padding: var(--toast-sharp-padding);
+    transition: var(--toast-sharp-transition);
+    max-width: var(--toast-sharp-max-width);
+    width: var(--toast-sharp-width);
+    text-align: center;
+    font-size: var(--toast-sharp-font-size);
+    background: var(--toast-sharp-background);
+    color: var(--toast-sharp-color);
+    filter: var(--toast-sharp-filter);
 }
 
 .toast-success {
@@ -37,27 +72,6 @@
     color: #fff8f1;
 }
 
-.toast-sharp {
-    padding: 12px;
-    border-radius: 5px;
-    transition: all 0.3s ease-out;
-    max-width: 420px;
-    width: calc(100% - 2rem);
-    margin: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(145deg, #101010, #1b1b1b);
-    color: #00FFCC;
-    filter: drop-shadow(0 0 0.1rem #00FFCC);
-}
-
-/* Variant styles */
 .toast-success-sharp {
     background: linear-gradient(145deg, #003300, #006600);
     color: #00FFCC;
@@ -78,7 +92,6 @@
     color: #FFCC00;
 }
 
-/* Toaster container */
 .toaster-container {
     position: fixed;
     z-index: 9999;
@@ -91,7 +104,6 @@
     pointer-events: none;
 }
 
-/* Toaster positions */
 .toaster-top-left,
 .toaster-top-right,
 .toaster-top-center {
@@ -121,7 +133,6 @@
     transform: translateX(-50%);
 }
 
-/* Toast stack */
 .toast-stack {
     display: flex;
     flex-direction: column;
@@ -139,12 +150,10 @@
     transition: opacity 400ms, transform 400ms;
 }
 
-/* Media query for small devices */
 @media (max-width: 768px) {
 
     .toast,
     .toast-sharp {
-        width: calc(100% - 1rem);
         margin: 0;
         max-width: 100%;
         padding: 8px 12px;
@@ -155,7 +164,6 @@
     .toast-sharp span {
         display: block;
         overflow: hidden;
-
     }
 
     .toaster-container {
